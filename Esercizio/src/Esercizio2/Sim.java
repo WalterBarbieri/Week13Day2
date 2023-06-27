@@ -18,13 +18,15 @@ public class Sim {
 
 	// Metodi
 	public void stampaSim() {
+		System.out.println("Dati Sim");
 		System.out.println("Numero telefono: " + numero);
 		System.out.println("Credito: " + credito);
 		System.out.println("Ultime chiamate effettuate: ");
 		for (int i = 0; i < numChiamate; i++) {
 			System.out.println("Numero Chiamato: " + chiamate[i].numChiamato);
-			System.out.println("Durata: " + chiamate[i].durata);
+			System.out.println("Durata: " + chiamate[i].durata + " min");
 		}
+		System.out.println("");
 	}
 
 	public void aggiungiChiamata(Chiamata chiamata) {
@@ -37,5 +39,9 @@ public class Sim {
 			}
 			chiamate[4] = chiamata;
 		}
+	}
+
+	public void aggiungiCredito(double credito) {
+		this.credito += credito;
 	}
 }

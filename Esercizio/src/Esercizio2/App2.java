@@ -21,6 +21,8 @@ public class App2 {
 		sim2.aggiungiChiamata(chiamata3);
 		sim2.aggiungiChiamata(chiamata4);
 		sim2.aggiungiChiamata(chiamata5);
+		sim1.aggiungiCredito(10);
+		sim2.aggiungiCredito(20);
 		sim1.stampaSim();
 		sim2.stampaSim();
 
