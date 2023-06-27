@@ -14,12 +14,24 @@ public class Carrello {
 	}
 
 	// Metodi
-	public void aggiugniArticolo(Articolo articolo) {
+	public void aggiungiArticolo(Articolo articolo) {
 		if (articoli == null) {
 			articoli = new Articolo[1];
 			articoli[0] = articolo;
 		} else {
 			Articolo[] nuovoArray = new Articolo[articoli.length + 1];
+			System.arraycopy(articoli, 0, nuovoArray, 0, articoli.length);
+			nuovoArray[articoli.length] = articolo;
+			articoli = nuovoArray;
 		}
+	}
+
+	public double calcolaTotale() {
+		totale = 0;
+		for (Articolo articolo : articoli) {
+			totale += articolo.prezzo;
+		}
+
+		return totale;
 	}
 }
