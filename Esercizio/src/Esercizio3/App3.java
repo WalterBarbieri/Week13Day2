@@ -19,7 +19,7 @@ public class App3 {
 		System.out.println("User: " + carrello1.cliente.nomeCognome + " UserId: " + carrello1.cliente.codiceCliente);
 		for (int i = 0; i < articoli.length; i++) {
 			System.out.println(
-					"Articolo n" + i + ": " + articoli[i].descrizioneArticolo + " " + articoli[i].prezzo + "€");
+					"Articolo n" + (i + 1) + ": " + articoli[i].descrizioneArticolo + " " + articoli[i].prezzo + "€");
 		}
 		System.out.println("Totale: " + totale);
 
